@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    app:layout_constraintCircleRadius="10dp">
+
+    <EditText
+        android:id="@+id/reset_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:hint="@string/edit_name"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edit_surname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reset_pass"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="sans-serif"
+        android:hint="@string/edit_surname"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/edit_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_surname"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/write_your_number"
+        android:ems="10"
+        android:inputType="number" />
+</RelativeLayout>

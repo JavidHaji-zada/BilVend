@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context="com.example.csgroupg.bilvend.LoginPage">
+
+
+    <EditText
+        android:id="@+id/Email"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="67dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="16dp"
+        android:drawableStart="@drawable/ic_action_user"
+        android:ems="10"
+        android:fontFamily="@font/abeezee_italic"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginPageLogo" />
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/sendCard"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/colorAccent"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/resetPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rememberMe">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="monospace"
+                android:text="@string/login"
+                android:textColor="@android:color/white"
+                android:textSize="28sp" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <ImageView
+        android:id="@+id/loginPageLogo"
+        android:layout_width="161dp"
+        android:layout_height="162dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="117dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/logo"
+        app:layout_constraintBottom_toTopOf="@+id/Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginStart="4dp"
+        android:text="@string/noRegistration_explanation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/Email"
+        android:layout_below="@+id/Email"
+        android:layout_marginEnd="67dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="16dp"
+        android:drawableStart="@drawable/ic_action_password"
+        android:ems="10"
+        android:fontFamily="@font/abeezee_italic"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/rememberMe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Email" />
+
+    <CheckBox
+        android:id="@+id/rememberMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/sendCard"
+        android:layout_below="@+id/sendCard"
+        android:layout_marginEnd="194dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="16dp"
+        android:checked="false"
+        android:text="@string/remember_me"
+        app:layout_constraintBottom_toTopOf="@+id/sendCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <TextView
+        android:id="@+id/noRegistration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="27dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginStart="94dp"
+        android:fontFamily="@font/abeezee_italic"
+        android:text="@string/noRegistration"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/resetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/Email"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/abeezee_italic"
+        android:text="@string/reset_password"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/signup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sendCard" />
+
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/Email"
+        android:layout_alignTop="@+id/resetPassword"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/abeezee_italic"
+        android:text="@string/signup"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/resetPassword"
+        app:layout_constraintTop_toBottomOf="@+id/sendCard"
+        app:layout_constraintVertical_bias="0.78" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="133dp"
+        android:layout_marginStart="133dp"
+        android:text="@string/or"
+        android:textColor="@android:color/black"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/noRegistration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resetPassword" />
+
+</android.support.constraint.ConstraintLayout>

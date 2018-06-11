@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "864967157699",
+    "firebase_url": "https://bilvend-47ba1.firebaseio.com",
+    "project_id": "bilvend-47ba1",
+    "storage_bucket": "bilvend-47ba1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:864967157699:android:1b3e47c2da2bcdd8",
+        "android_client_info": {
+          "package_name": "com.example.csgroupg.bilvend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "864967157699-c5h1ejk10qv2712omlfjn6rah3lpnlfr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.csgroupg.bilvend",
+            "certificate_hash": "45aa87937a9967c99025cd03d7f0dc00b1798f3c"
+          }
+        },
+        {
+          "client_id": "864967157699-g7sn7e8799d2205pjeg0s8cb1tnene23.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.csgroupg.bilvend",
+            "certificate_hash": "5c409c0cbb803c6b787bd30357e038cf9536ac5e"
+          }
+        },
+        {
+          "client_id": "864967157699-19rlg6qsuuse99c15d51eq9rnn9vium4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtCvCebNo1ON5oEEvCwht-JTmJwBbm7s0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "864967157699-19rlg6qsuuse99c15d51eq9rnn9vium4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

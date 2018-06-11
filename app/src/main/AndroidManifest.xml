@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.csgroupg.bilvend">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".LoginPage"
+            android:screenOrientation="portrait"
+            tools:ignore="ExtraText">
+            <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="@string/google_android_map_api_key" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".RegisterPage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainPage"
+            android:label="@string/BilVend"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AdPage"
+            android:label="@string/title_activity_ad_page"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".InboxPage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AdPublishingPage"
+            android:label="New Advertisement"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Favourites"
+            android:label="Favourites"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".MyProfileActivity"
+            android:label="My profile"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".Categories"
+            android:label="@string/title_activity_categories"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".MyPosts"
+            android:label="@string/my_posts"
+            android:screenOrientation="portrait" />
+        <activity android:name=".EmailIntent" />
+        <activity
+            android:name=".MyPostsAdPage"
+            android:label="@string/title_activity_my_posts_ad_page"
+            android:theme="@style/AppTheme"></activity>
+    </application>
+
+</manifest>

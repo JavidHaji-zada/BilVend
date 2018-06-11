@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdPublishingPage">
+    <ImageView
+        android:id="@+id/advertisementPublishingPhoto"
+        android:layout_width="253dp"
+        android:layout_height="137dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="128dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/default_item_photo"
+        android:contentDescription="@string/photo_of_item" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/gradient"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        <ImageButton
+            android:id="@+id/finishPublish"
+            android:layout_width="49dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="2dp"
+            android:background="@color/end_color_gradient"
+            android:contentDescription="@string/finish_publishing"
+            app:srcCompat="@drawable/publlish" />
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="53dp"
+        android:layout_marginTop="233dp"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        android:visibility="invisible"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="@color/colorPrimary"
+        android:visibility="invisible"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="283dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="123dp"
+            android:ems="10"
+            android:hint="@string/content_description"
+            android:inputType="textPersonName"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/adTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="55dp"
+            android:ems="10"
+            android:hint="@string/price_of_the_item"
+            android:inputType="textPersonName|number"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/adDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:ems="10"
+            android:hint="@string/name_of_the_item"
+            android:inputType="textPersonName"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="58dp"
+        android:autofillHints="@string/category">
+
+    </Spinner>
+
+</RelativeLayout>

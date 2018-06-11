@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyPostsAdPage">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/adPageToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@drawable/gradient"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+            <include
+                android:id="@+id/include2"
+                layout="@layout/content_ad_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/editAdPageImage"
+                android:layout_width="190dp"
+                android:layout_height="190dp"
+                android:layout_marginTop="28dp"
+                android:contentDescription="@string/photo_of_item"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/adPageToolbar"
+                app:srcCompat="@drawable/default_item_photo" />
+
+            <TextView
+                android:id="@+id/editAdPagePrice"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/abeezee_italic"
+                android:text="@string/price"
+                android:textAlignment="textStart"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/editAdPageTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editAdPageImage" />
+
+            <TextView
+                android:id="@+id/editAdPageDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/abeezee_italic"
+                android:text="@string/description"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editAdPageTitle" />
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/changePic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="80dp"
+                android:layout_marginTop="220dp"
+                android:focusable="true"
+                app:layout_constraintBottom_toTopOf="@+id/adPageDescription"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/adPageImage"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/add_photo" />
+
+            <TextView
+                android:id="@+id/editAdPageTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/abeezee_italic"
+                android:text="@string/title"
+                android:textAlignment="textStart"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editAdPagePrice" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/openingFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        app:backgroundTint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_action_add" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@android:drawable/ic_menu_delete"
+        android:visibility="invisible"
+        app:backgroundTint="@color/colorAccent"
+        app:elevation="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:pressedTranslationZ="12dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:visibility="invisible"
+        app:backgroundTint="@color/colorAccent"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_home_black_24dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:src="@android:drawable/ic_menu_edit"
+        android:visibility="invisible"
+        app:backgroundTint="@color/colorAccent"
+        app:elevation="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/openingFab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:pressedTranslationZ="12dp" />
+
+</android.support.constraint.ConstraintLayout>
